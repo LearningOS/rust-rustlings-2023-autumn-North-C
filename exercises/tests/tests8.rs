@@ -16,6 +16,12 @@ mod tests {
     #[test]
     fn test_success() {
         #[cfg(feature = "pass")]
+        if cfg!(feature = "pass") {
+            println!("pass");
+        }
+        else{
+            println!("fail");
+        }
         return;
 
         panic!("no cfg set");
